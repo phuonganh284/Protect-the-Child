@@ -9,9 +9,12 @@ https://phuonganh284.itch.io/protect-the-child
 
 ## !Controls
 
-* Move: A / D
-* Jump: Space
+
+* Move: A / D 
+* Jump: Space / W
+* Dash: Left Shift Button
 * Attack: Left Mouse Button
+* Strong Attack: Right Mouse Button
 
 ## !Features
 
