@@ -789,7 +789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb3b5e0b112f37f4e9c07933c60e8988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  maxHealth: 10
+  maxHealth: 15
   currentHealth: 0
   damageMaterial: {fileID: 2100000, guid: ad60289bd74f66d4bbd392a06e78f4b0, type: 2}
   damageFeedbackDuration: 0.1
@@ -803,7 +803,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   moveSpeed: 8
-  jumpForce: 15
+  jumpForce: 18
+  dashForce: 28
+  dashDuration: 0.14
+  dashCooldown: 0.5
+  strongAttackCooldown: 1.2
+  strongAttackDuration: 0.88
 --- !u!1 &474972463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2657,7 +2662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d2c59b7bf2b55c45855146740048aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectToProtect
-  maxHealth: 15
+  maxHealth: 20
   currentHealth: 0
   damageMaterial: {fileID: 2100000, guid: ad60289bd74f66d4bbd392a06e78f4b0, type: 2}
   damageFeedbackDuration: 0.1

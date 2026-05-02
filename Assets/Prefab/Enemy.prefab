@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9a129558e7fe8747853e6014c4a7245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  maxHealth: 3
+  maxHealth: 4
   currentHealth: 0
   damageMaterial: {fileID: 2100000, guid: ad60289bd74f66d4bbd392a06e78f4b0, type: 2}
   damageFeedbackDuration: 0.1

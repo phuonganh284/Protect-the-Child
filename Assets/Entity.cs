@@ -22,7 +22,7 @@ public class Entity : MonoBehaviour
     [SerializeField] protected float attackRadius;
     [SerializeField] protected Transform attackPoint;
     [SerializeField] protected LayerMask whatIsTarget;
-
+    protected int currentDamage = 1;
 
     protected int facingDir = 1; //1 -> right, -1 -> left
     protected bool facingRight = true;
@@ -54,23 +54,22 @@ public class Entity : MonoBehaviour
     public void DamageTarget()
     {
         Collider2D[] enemyColliders = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, whatIsTarget);
+
         foreach (Collider2D enemy in enemyColliders)
         {
             Entity entityTarget = enemy.GetComponent<Entity>();
-            entityTarget.TakeDamage();
+            entityTarget.TakeDamage(currentDamage);
         }
     }
 
 
-    private void TakeDamage()
+    public void TakeDamage(int damage)
     {
-        currentHealth -= 1;
+        currentHealth -= damage;
         PlayDamageFeedback();
 
         if (currentHealth <= 0)
-        {
             Die();
-        }
     }
 
     private void PlayDamageFeedback()
@@ -116,6 +115,7 @@ public class Entity : MonoBehaviour
     {
         if (isGrounded)
         {
+            currentDamage = 1;
             anim.SetTrigger("attack");
         }
     }
